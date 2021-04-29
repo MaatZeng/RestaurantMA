@@ -68,5 +68,5 @@ cleandata["PHONE"] = [str(n[2:]) for n in data.phone]
 
 df = cleandata
 
-df.to_csv("yelp.csv", index = False)
+# df.to_csv("yelp.csv", index = False)
 
