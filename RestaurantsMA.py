@@ -175,6 +175,7 @@ def update_table(ratings, prices, categories):
     data2 = data2.to_dict("record")
     return data2, fig
 
+server = app.server
 
 
 if __name__ == '__main__':
