@@ -15,65 +15,6 @@ import pandas as pd
 import plotly.express as px
 from numpy import arange
 
-
-# import requests
-# import json
-
-
-
-# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-# app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
-# Data from U.S. Congress, Joint Economic Committee, Social Capital Project. https://www.jec.senate.gov/public/index.cfm/republicans/2018/4/the-geography-of-social-capital-in-america
-# api_key = "0XQf--f7nCqD5kYbCXsLaAPOCro2yNKCW5Gy4s5T_QE9dZpZTjEOwEA_KweAmKjIU9MKCmZ0QInVR5ZoxvuPc3cesNxHQiZHFuuesooHASezxNESH7OF_GOQkQfRX3Yx"
-# headers = {'Authorization' : 'Bearer %s' % api_key}
- 
-# total_amount = 20
- 
-# URL = "https://api.yelp.com/v3/businesses/search"
-# params = {'location' : 'Boston', 'limit' : 50}
-
-# output = []
-
-
-# for i in range(total_amount):
-#     params['offset'] = i * 50
-#     req = requests.get(URL, params=params, headers=headers)
-#     output = output + (json.loads(req.text)['businesses'])
-
-
-# with open('data.json','w') as f:
-#     json.dump(output, f, indent =4)
-
-
-# data =  pd.read_json('data.json')
-# data = data[data.is_closed == False] 
-# cleandata = pd.DataFrame()
-# cleandata['NAME'] = data['name']
-
-# category =[]
-# street=[]
-# city=[]
-# for i in range(len(cleandata)):
-#     category.append(data['categories'][i][0]['title'])
-#     street.append(data['location'][i]['address1'])
-#     city.append(data['location'][i]['city'])
-
-
-# cleandata['CATEGORY'] = category
-# cleandata['RATING'] = data['rating'].apply(str)
-# cleandata['PRICE'] = data['price']
-# cleandata["REVIEW"] = data["review_count"]
-# cleandata['STREET'] = street
-# cleandata['CITY'] = city
-# cleandata["PHONE"] = [str(n[2:]) for n in data.phone]
-
-
-# df = cleandata
-
-#df.to_csv("yelp.csv", index = False)
-
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -82,7 +23,7 @@ df = pd.read_csv("yelp.csv")
 
 
 app.layout = html.Div([
-    html.H2("Find your ideal restaurants in MA! ", style = {"textAlign" : "center"}),
+    html.H2("Find your ideal restaurants in Massachusetts ", style = {"textAlign" : "center"}),
     html.Label("What is this dashboard about?",
                style = {"fontSize" : 20, "textAlign" : "left"}),
     html.P("This dashboard summarizes the information of over one thousand restaurants in MA from Yelp. It allows an user to find the restaurant basded on the following three search criteria:"),
