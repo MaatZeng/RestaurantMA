@@ -63,8 +63,8 @@ app.layout = html.Div([
         ),
     ],style = {"width" : "70%", "textAlign": "left"}),
     
-   # html.Label("Search Results: ",
-    #           style = {'fontSize' : 20, "textAlign" : "left"}),
+    html.Label("Search Results: ",
+               style = {'fontSize' : 20, "textAlign" : "left"}),
     html.Div([
     dash_table.DataTable(
         id='datatable_id',
