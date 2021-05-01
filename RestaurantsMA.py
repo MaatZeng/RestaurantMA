@@ -84,8 +84,8 @@ app.layout = html.Div([
     
     ], className='row'),
     
-    html.Label("Just go there !",
-               style = {'fontSize' : 20, "textAlign" : "left"}),
+#    html.Label("Just go there !",
+#               style = {'fontSize' : 20, "textAlign" : "left"}),
     html.Div([
         dcc.Graph(id = "graph"),
     ], className = "row")
